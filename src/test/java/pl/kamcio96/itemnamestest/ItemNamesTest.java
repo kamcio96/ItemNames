@@ -12,6 +12,9 @@ public class ItemNamesTest {
         ItemNames names = new ItemNames();
         String name = names.getTranslatedName(Material.GRASS);
         Assert.assertEquals("trawa", name);
+
+        names.addException(Material.COBBLESTONE, "cobbletest");
+        Assert.assertEquals("cobbletest", names.getTranslatedName(Material.COBBLESTONE));
     }
 
 }
