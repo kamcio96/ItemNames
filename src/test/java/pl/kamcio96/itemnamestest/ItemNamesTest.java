@@ -9,7 +9,7 @@ public class ItemNamesTest {
 
     @Test
     public void itemNames_test() {
-        ItemNames names = new ItemNames();
+        ItemNames names = new ItemNames(ItemNames.PL);
         String name = names.getTranslatedName(Material.GRASS);
         Assert.assertEquals("trawa", name);
 
