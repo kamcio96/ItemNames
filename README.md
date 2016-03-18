@@ -1,0 +1,2 @@
+# ItemNames
+Translated items names
