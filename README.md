@@ -1,4 +1,6 @@
-# ItemNames
+# ItemNames 
+![Build status](https://travis-ci.org/kamcio96/ItemNames.svg?branch=master)
+
 Translated items names
 
 ###Reason
