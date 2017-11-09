@@ -15,7 +15,7 @@ pom.xml:
 ```xml
 <dependency>
     <groupId>pl.kamcio96</groupId>
-    <artifactId>IteamNames</artifactId>
+    <artifactId>ItemNames</artifactId>
     <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
