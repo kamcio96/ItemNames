@@ -3,14 +3,14 @@
 
 Translated items names
 
-###Reason
+### Reason
 
-Do you need translated item names? Just use this library, I will update item list when mc will be update.
-Currently only PL lang is supported. If you have some time, you can create PR to my [github site](https://github.com/kamcio96/kamcio96.github.io) with your lang :wink:
+Do you need translated item names? Just use this library, I'll update item list when Minecraft gets update.
+Actually, PL is the only supported language. If you have some time, you can create PR to my [github site](https://github.com/kamcio96/kamcio96.github.io) with your lang :wink:
 
-###Usage
+### Usage
 
-I don't have maven repo now. So you have clone that project and run ```mvn install```
+I don't have maven repo, so you have to clone this project and execute ```mvn install```
 pom.xml:
 ```xml
 <dependency>
@@ -19,10 +19,8 @@ pom.xml:
     <version>1.0-SNAPSHOT</version>
 </dependency>
 ```
-
-plugin:
 ```java
 private static ItemNames names = new ItemNames(ItemNames.PL);
 ```
 
-Use single instance for plugin. Creating an object takes some time :smile:
+Use just a single instance of the library - creating an object takes some time :smile:
