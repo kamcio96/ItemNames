@@ -1,20 +1,36 @@
 package pl.kamcio96.itemnamestest;
 
 import org.bukkit.Material;
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import pl.kamcio96.itemnames.ItemNames;
 
 public class ItemNamesTest {
 
-    @Test
-    public void itemNames_test() {
-        ItemNames names = new ItemNames(ItemNames.PL);
-        String name = names.getTranslatedName(Material.GRASS);
-        Assert.assertEquals("trawa", name);
+    private static ItemNames names;
 
+    @BeforeAll
+    public static void setup() {
+        names = new ItemNames(ItemNames.PL);
+    }
+
+    @AfterAll
+    public static void cleanup() {
+        names = null;
+    }
+
+    @Test
+    public void testTranslate() {
+        String name = names.getTranslatedName(Material.GRASS);
+        Assertions.assertEquals("trawa", name);
+    }
+
+    @Test
+    public void testException() {
         names.addException(Material.COBBLESTONE, "cobbletest");
-        Assert.assertEquals("cobbletest", names.getTranslatedName(Material.COBBLESTONE));
+        Assertions.assertEquals("cobbletest", names.getTranslatedName(Material.COBBLESTONE));
     }
 
 }
